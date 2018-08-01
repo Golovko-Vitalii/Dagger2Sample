@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dagger2Sample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_button_text">CLICK ME!</string>
+    <string name="fragment_textview_text1">CLICK THE BUTTON</string>
+    <string name="fragment_textview_text2">YOU\'VE CLICKED BUTTON</string>
+</resources>
