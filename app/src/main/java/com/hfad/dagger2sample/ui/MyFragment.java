@@ -1,5 +1,6 @@
 package com.hfad.dagger2sample.ui;
 
+//import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import javax.inject.Inject;
 import dagger.android.support.DaggerFragment;
 
 public class MyFragment extends DaggerFragment implements MyContract.View {
+//public class MyFragment extends Fragment implements MyContract.View {
 
     private TextView textView;
 
@@ -72,7 +74,12 @@ public class MyFragment extends DaggerFragment implements MyContract.View {
 
     @Override
     public void changeTextView() {
-        String str = getResources().getString(R.string.fragment_textview_text2);
+        String str;
+        if (!textView.getText().toString().equals(getResources().getString(R.string.fragment_textview_text2))){
+            str = getResources().getString(R.string.fragment_textview_text2);
+        } else {
+            str = getResources().getString(R.string.fragment_textview_text1);
+        }
         textView.setText(str);
     }
 

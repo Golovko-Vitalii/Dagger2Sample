@@ -8,13 +8,15 @@ import com.hfad.dagger2sample.di.modules.PresentersModule;
 import javax.inject.Singleton;
 import dagger.Component;
 import dagger.android.AndroidInjector;
+import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
 @Component(modules = {
         PresentersModule.class,
         FragmentsModule.class,
         MyAppModule.class,
-        ActivitiesModule.class
+        ActivitiesModule.class,
+        AndroidSupportInjectionModule.class
 })
 
 public interface MyAppComponent extends AndroidInjector<MyApp> {
