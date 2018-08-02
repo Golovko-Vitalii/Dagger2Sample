@@ -10,12 +10,15 @@ import android.widget.TextView;
 
 import com.hfad.dagger2sample.R;
 
+import javax.inject.Inject;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class BlankFragment extends Fragment implements BlankContract.View {
 
     private TextView textView;
+    @Inject
     private BlankContract.Presenter mPresenter;
 
 
