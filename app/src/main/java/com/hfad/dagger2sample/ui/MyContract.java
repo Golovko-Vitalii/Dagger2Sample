@@ -1,6 +1,6 @@
 package com.hfad.dagger2sample.ui;
 
-public interface BlankContract {
+public interface MyContract {
     interface View {
         void onInit();
 

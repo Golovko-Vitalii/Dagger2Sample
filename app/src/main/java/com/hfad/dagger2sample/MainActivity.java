@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-import com.hfad.dagger2sample.ui.BlankFragment;
+import com.hfad.dagger2sample.ui.MyFragment;
 
 public class MainActivity extends Activity {
 
@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        BlankFragment fragment = new BlankFragment();
+        MyFragment fragment = new MyFragment();
         ft.replace(R.id.main_container, fragment, null);
         ft.addToBackStack(null);
         ft.commit();

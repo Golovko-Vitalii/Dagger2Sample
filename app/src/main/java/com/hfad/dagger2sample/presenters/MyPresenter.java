@@ -1,20 +1,26 @@
 package com.hfad.dagger2sample.presenters;
 
-import com.hfad.dagger2sample.ui.BlankContract;
-import com.hfad.dagger2sample.ui.BlankViewNull;
+import com.hfad.dagger2sample.ui.MyContract;
+import com.hfad.dagger2sample.ui.MyViewNull;
 
-public class BlankPresenter implements BlankContract.Presenter {
+import javax.inject.Inject;
 
-    private BlankContract.View mView;
+public class MyPresenter implements MyContract.Presenter {
+
+    private MyContract.View mView;
+
+    @Inject
+    public MyPresenter() {
+    }
 
     @Override
-    public void onAttachView(BlankContract.View view) {
+    public void onAttachView(MyContract.View view) {
         this.mView = view;
     }
 
     @Override
     public void onDetachView() {
-        this.mView = new BlankViewNull();
+        this.mView = new MyViewNull();
     }
 
     @Override

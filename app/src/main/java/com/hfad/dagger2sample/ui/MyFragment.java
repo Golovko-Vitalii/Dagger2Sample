@@ -15,14 +15,15 @@ import javax.inject.Inject;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BlankFragment extends Fragment implements BlankContract.View {
+public class MyFragment extends Fragment implements MyContract.View {
 
     private TextView textView;
+
     @Inject
-    private BlankContract.Presenter mPresenter;
+    public MyContract.Presenter mPresenter;
 
 
-    public BlankFragment() {
+    public MyFragment() {
         // Required empty public constructor
     }
 
@@ -31,7 +32,7 @@ public class BlankFragment extends Fragment implements BlankContract.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
         textView = (TextView) view.findViewById(R.id.fragment_textview);
         view.findViewById(R.id.fragment_button).setOnClickListener(new View.OnClickListener() {
             @Override

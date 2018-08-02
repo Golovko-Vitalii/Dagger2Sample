@@ -18,9 +18,20 @@ android {
     }
 }
 
+def DaggerVersion = "2.11"
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    // Dagger core
+    annotationProcessor "com.google.dagger:dagger-compiler:$DaggerVersion"
+    implementation "com.google.dagger:dagger:$DaggerVersion"
+
+    // Dagger Android
+    annotationProcessor "com.google.dagger:dagger-android-processor:$DaggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$DaggerVersion"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

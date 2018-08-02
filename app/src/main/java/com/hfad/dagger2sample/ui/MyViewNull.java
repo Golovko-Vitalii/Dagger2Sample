@@ -1,7 +1,7 @@
 package com.hfad.dagger2sample.ui;
 
 
-public class BlankViewNull implements BlankContract.View {
+public class MyViewNull implements MyContract.View {
     @Override
     public void onInit() {
         //empty
