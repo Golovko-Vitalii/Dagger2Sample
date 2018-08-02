@@ -1,6 +1,9 @@
 package com.hfad.dagger2sample.di.components;
 
 import com.hfad.dagger2sample.app.MyApp;
+import com.hfad.dagger2sample.di.modules.ActivitiesModule;
+import com.hfad.dagger2sample.di.modules.FragmentsModule;
+import com.hfad.dagger2sample.di.modules.MyAppModule;
 import com.hfad.dagger2sample.di.modules.PresentersModule;
 import javax.inject.Singleton;
 import dagger.Component;
@@ -8,7 +11,10 @@ import dagger.android.AndroidInjector;
 
 @Singleton
 @Component(modules = {
-        PresentersModule.class
+        PresentersModule.class,
+        FragmentsModule.class,
+        MyAppModule.class,
+        ActivitiesModule.class
 })
 
 public interface MyAppComponent extends AndroidInjector<MyApp> {
