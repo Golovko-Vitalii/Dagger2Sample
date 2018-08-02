@@ -1,7 +1,5 @@
 package com.hfad.dagger2sample.ui;
 
-
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +10,9 @@ import com.hfad.dagger2sample.R;
 
 import javax.inject.Inject;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class MyFragment extends Fragment implements MyContract.View {
+import dagger.android.support.DaggerFragment;
+
+public class MyFragment extends DaggerFragment implements MyContract.View {
 
     private TextView textView;
 
@@ -23,9 +20,17 @@ public class MyFragment extends Fragment implements MyContract.View {
     public MyContract.Presenter mPresenter;
 
 
-    public MyFragment() {
+   /* public MyFragment() {
         // Required empty public constructor
-    }
+    }*/
+   /*public static MyFragment newInstance(){
+       Bundle args = new Bundle();
+
+       MyFragment fragment = new MyFragment();
+       fragment.setArguments(args);
+
+       return fragment;
+   }*/
 
 
     @Override
@@ -70,4 +75,5 @@ public class MyFragment extends Fragment implements MyContract.View {
         String str = getResources().getString(R.string.fragment_textview_text2);
         textView.setText(str);
     }
+
 }
